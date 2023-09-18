@@ -24,6 +24,7 @@
 		3F4A48102AB8B3D500D6C6EB /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A480F2AB8B3D500D6C6EB /* PhotoViewController.swift */; };
 		3F4A48122AB8B49300D6C6EB /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A48112AB8B49300D6C6EB /* PhotoView.swift */; };
 		3F4A48162AB8B61000D6C6EB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3F4A48152AB8B61000D6C6EB /* Kingfisher */; };
+		3F4A48182AB8BD1B00D6C6EB /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A48172AB8BD1B00D6C6EB /* Type.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		3F4A480D2AB8ACD400D6C6EB /* UnsplashData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashData.swift; sourceTree = "<group>"; };
 		3F4A480F2AB8B3D500D6C6EB /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		3F4A48112AB8B49300D6C6EB /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		3F4A48172AB8BD1B00D6C6EB /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				3F4A47EB2AB8859A00D6C6EB /* Assets.xcassets */,
 				3F4A47F02AB8859A00D6C6EB /* Info.plist */,
 				3F4A48052AB8AA8C00D6C6EB /* API */,
+				3F4A48172AB8BD1B00D6C6EB /* Type.swift */,
 			);
 			path = MVVMProject;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				3F4A480E2AB8ACD400D6C6EB /* UnsplashData.swift in Sources */,
 				3F4A48012AB89D9A00D6C6EB /* Observable.swift in Sources */,
 				3F4A47FA2AB886B400D6C6EB /* LoginView.swift in Sources */,
+				3F4A48182AB8BD1B00D6C6EB /* Type.swift in Sources */,
 				3F4A47E52AB8859800D6C6EB /* SceneDelegate.swift in Sources */,
 				3F4A48042AB8AA8400D6C6EB /* APIService.swift in Sources */,
 				3F4A48092AB8AABA00D6C6EB /* APIKey.swift in Sources */,

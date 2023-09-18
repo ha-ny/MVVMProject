@@ -44,8 +44,8 @@ class LoginViewController: UIViewController {
         let nickname = mainView.nicknameTextField.text ?? ""
         let code = mainView.codeTextField.text ?? ""
         
-        let user = User(email: emil, password: password, nickname: nickname, code: code)
-        viewModel.signRegulation(data: user)
+        let data = User(email: emil, password: password, nickname: nickname, code: code)
+        viewModel.signRegulation(data: data)
     }
 }
 
