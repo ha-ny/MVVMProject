@@ -22,7 +22,7 @@ class LoginViewModel {
 
         if let code, code != "" {
             guard code.count == 6 else { return "추천코드는 6자리입니다" }
-            guard let code = Int(code) else { return "추천코드는 숫자로 이루어져있습니다" }
+            guard let _ = Int(code) else { return "추천코드는 숫자로 이루어져있습니다" }
         }
         
         return "회원가입: 성공"
