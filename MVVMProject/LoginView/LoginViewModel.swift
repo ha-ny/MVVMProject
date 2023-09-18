@@ -10,7 +10,6 @@ import Foundation
 class LoginViewModel {
         
     var message = Observable("")
-    var result = Observable(false)
     
     func errorHandling(data: User) throws{
      
@@ -44,10 +43,11 @@ class LoginViewModel {
         message.value = "회원가입: 성공"
     }
     
-    func signRegulation(data: User) {
+    func signRegulation(data: User, completion: () -> ()) {
         
         do {
             try errorHandling(data: data)
+            completion()
         } catch error.emailIsEmpty{
             message.value = "이메일을 입력해주세요"
         } catch error.emailIncorrect{

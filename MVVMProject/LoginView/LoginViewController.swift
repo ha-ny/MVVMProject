@@ -21,23 +21,14 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        mainView.signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
-        
         viewModel.message.bind { value in
             self.mainView.resultLabel.text = value
         }
         
-        viewModel.result.bind { value in
-            if value {
-                let vc = PhotoViewController()
-                
-                vc.imageSetting {
-                    self.present(vc, animated: true)
-                }
-            }
-        }
+        mainView.signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
     
+    // 회원가입 버튼 클릭
     @objc func signUpButtonTapped() {
         let emil = mainView.emailTextField.text ?? ""
         let password = mainView.passwordTextField.text ?? ""
@@ -45,7 +36,21 @@ class LoginViewController: UIViewController {
         let code = mainView.codeTextField.text ?? ""
         
         let data = User(email: emil, password: password, nickname: nickname, code: code)
-        viewModel.signRegulation(data: data)
+        
+        // 회원가입 성공 -> 화면 전환
+        viewModel.signRegulation(data: data) {
+            self.photoViewPresent()
+        }
+    }
+    
+    // 화면 전환: PhotoViewController
+    func photoViewPresent() {
+        let vc = PhotoViewController()
+        
+        //화면 바뀌기 전에 미리 이미지 세팅
+        vc.imageSetting {
+            self.present(vc, animated: true)
+        }
     }
 }
 
