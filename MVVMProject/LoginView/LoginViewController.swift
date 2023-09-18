@@ -39,13 +39,13 @@ class LoginViewController: UIViewController {
     }
     
     @objc func signUpButtonTapped() {
+        let emil = mainView.emailTextField.text ?? ""
+        let password = mainView.passwordTextField.text ?? ""
+        let nickname = mainView.nicknameTextField.text ?? ""
+        let code = mainView.codeTextField.text ?? ""
         
-        let emil = mainView.emailTextField.text
-        let password = mainView.passwordTextField.text
-        let nickname = mainView.nicknameTextField.text
-        let code = mainView.codeTextField.text
-        
-        viewModel.signRegulation(email: emil, password: password, nickname: nickname, code: code)
+        let user = User(email: emil, password: password, nickname: nickname, code: code)
+        viewModel.signRegulation(data: user)
     }
 }
 
